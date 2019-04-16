@@ -2,6 +2,7 @@
 #define MAINWIDGET_H
 
 #include <QWidget>
+#include <QMenu>
 
 namespace Ui {
 class mainwidget;
@@ -26,6 +27,7 @@ signals:
     void StopScreenSaver();
 private slots:
     void ChangeType();
+    void ChangeScreenTime(QMenu*menu,int index,bool checked);
 private:
     Ui::mainwidget *ui;
     class DataPrivate;

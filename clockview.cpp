@@ -61,6 +61,7 @@ clockView::clockView(QWidget *parent) :
     QGraphicsView(parent),
     _p(new DataPrivate())
 {
+    this->setCursor(QCursor(Qt::BlankCursor));
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setWindowFlags(Qt::FramelessWindowHint | Qt::SubWindow );
