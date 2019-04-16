@@ -30,14 +30,16 @@ SOURCES += \
     clockview.cpp \
     commonitemlist.cpp \
     commonrectitem.cpp \
-    makedesktop.cpp
+    makedesktop.cpp \
+    globaleventfilter.cpp
 
 HEADERS += \
         mainwidget.h \
     clockview.h \
     commonitemlist.h \
     commonrectitem.h \
-    makedesktop.h
+    makedesktop.h \
+    globaleventfilter.h
 
 FORMS += \
         mainwidget.ui

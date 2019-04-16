@@ -14,7 +14,7 @@
    <string>mainwidget</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(0, 0, 0);</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <property name="spacing">
@@ -32,19 +32,9 @@
    <property name="bottomMargin">
     <number>0</number>
    </property>
-   <item>
-    <widget class="clockView" name="graphicsView"/>
-   </item>
   </layout>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <customwidgets>
-  <customwidget>
-   <class>clockView</class>
-   <extends>QGraphicsView</extends>
-   <header>clockview.h</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>

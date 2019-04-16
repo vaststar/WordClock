@@ -63,13 +63,31 @@ clockView::clockView(QWidget *parent) :
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setWindowFlags(Qt::FramelessWindowHint);
+    setWindowFlags(Qt::FramelessWindowHint | Qt::SubWindow );
+    setStyleSheet("QWidget{background:back;}");
     QTimer::singleShot(1000,this,&clockView::initScene);
 }
 
 clockView::~clockView()
 {
     delete _p;
+}
+
+void clockView::startClock()
+{
+    if(!_p->timer->isActive())
+    {
+        _p->timer->start(1000);
+    }
+
+}
+
+void clockView::stopClock()
+{
+    if(_p->timer->isActive())
+    {
+        _p->timer->stop();
+    }
 }
 
 void clockView::updateTime()
@@ -125,6 +143,6 @@ void clockView::initClock()
     _p->month->initNumber(time.date().month());
 
     connect(_p->timer,&QTimer::timeout,this,&clockView::updateTime);
-    _p->timer->start(1000);
+//    startClock();
 }
 

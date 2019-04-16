@@ -9,6 +9,9 @@ class clockView : public QGraphicsView
 public:
     explicit clockView(QWidget *parent = nullptr);
     ~clockView();
+public:
+    void startClock();
+    void stopClock();
 private slots:
     void updateTime();
 private:
